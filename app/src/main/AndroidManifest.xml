@@ -20,6 +20,10 @@
             android:name=".Entry"
             android:label="@string/title_activity_entry" >
         </activity>
+        <activity
+            android:name=".AskAct"
+            android:label="@string/title_activity_ask" >
+        </activity>
     </application>
 
 </manifest>
