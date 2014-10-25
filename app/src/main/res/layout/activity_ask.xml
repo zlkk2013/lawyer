@@ -16,7 +16,8 @@
         android:layout_above="@+id/linearLayout"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:gravity="top" />
+        android:gravity="top"
+        android:text="@string/default_ask" />
 
     <LinearLayout
         android:orientation="horizontal"
