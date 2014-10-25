@@ -5,6 +5,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class AskAct extends Activity {
@@ -16,6 +21,17 @@ public class AskAct extends Activity {
         ActionBar ab = getActionBar();
         ab.setTitle("我要提问");
         ab.setDisplayHomeAsUpEnabled(true);
+
+        List<String> spinnerArray =  new ArrayList<String>();
+        spinnerArray.add("item1");
+        spinnerArray.add("item2");
+        spinnerArray.add("item3");
+        spinnerArray.add("item4");
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, spinnerArray);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Spinner sItems = (Spinner) findViewById(R.id.spinner);
+        sItems.setAdapter(adapter);
     }
 
 
