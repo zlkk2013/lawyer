@@ -24,6 +24,10 @@
             android:name=".AskAct"
             android:label="@string/title_activity_ask" >
         </activity>
+        <activity
+            android:name=".JsonAct"
+            android:label="@string/title_activity_json" >
+        </activity>
     </application>
 
 </manifest>

@@ -8,5 +8,6 @@
     <string name="title_activity_ask">AskAct</string>
     <string name="action_ask">提问</string>
     <string name="default_ask">请尽可能详细的表述您的问题，您今日可以免费提问五次，开 通会员立即尊享无限制畅游咨询服务！</string>
+    <string name="title_activity_json">JsonAct</string>
 
 </resources>
