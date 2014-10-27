@@ -44,16 +44,163 @@
             android:textAlignment="center" />
     </LinearLayout>
 
-    <GridLayout
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5">
+        android:layout_height="0dp"
+        android:rowCount="10"
+        android:columnCount="10"
+        android:layout_weight="0.5"
+        android:weightSum="1"
+        android:orientation="vertical">
 
-    </GridLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:weightSum="1"
+            android:baselineAligned="false"
+            android:padding="@dimen/gap_small">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/border"
+                android:layout_marginLeft="@dimen/margin_magin"
+                android:layout_marginRight="@dimen/margin_magin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="律师"
+                    android:id="@+id/textView2"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="false"
+                    android:layout_above="@+id/textView2"
+                    android:layout_alignParentStart="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/border"
+                android:layout_marginLeft="@dimen/margin_magin"
+                android:layout_marginRight="@dimen/margin_magin"
+                android:id="@+id/relativeLayout3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="会计师"
+                    android:id="@+id/textView3"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox2"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="false"
+                    android:layout_above="@+id/textView3"
+                    android:layout_alignParentStart="false" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/gap_small">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/border"
+                android:layout_marginLeft="@dimen/margin_magin"
+                android:layout_marginRight="@dimen/margin_magin"
+                android:id="@+id/relativeLayout4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保荐人"
+                    android:id="@+id/textView4"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox3"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="false"
+                    android:layout_above="@+id/textView4"
+                    android:layout_alignParentStart="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/border"
+                android:layout_marginLeft="@dimen/margin_magin"
+                android:layout_marginRight="@dimen/margin_magin"
+                android:id="@+id/relativeLayout5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="投融资"
+                    android:id="@+id/textView5"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox4"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="false"
+                    android:layout_above="@+id/textView5"
+                    android:layout_alignParentStart="false" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.2"></LinearLayout>
+        android:layout_height="0dp"
+        android:layout_weight="0.2">
+
+        <Button
+            android:layout_width="@dimen/button_normal"
+            android:layout_height="wrap_content"
+            android:text="提交"
+            android:id="@+id/button2"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每位专家都经过我们实名验证和资格审核"
+            android:id="@+id/textView6"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
 </LinearLayout>
