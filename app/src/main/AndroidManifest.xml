@@ -30,6 +30,10 @@
             android:name=".JsonAct"
             android:label="@string/title_activity_json" >
         </activity>
+        <activity
+            android:name=".ConsultAct"
+            android:label="@string/title_activity_consult" >
+        </activity>
     </application>
 
 </manifest>
