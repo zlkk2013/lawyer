@@ -9,12 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.os.Build;
+import android.widget.TextView;
 
 public class MyActivity extends Activity {
     Button mButton;
     EditText mEdit;
-
+    TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,17 @@ public class MyActivity extends Activity {
                 Log.v("EditText", actName);
             }
         });
+
+        tv = (TextView)findViewById(R.id.textView);
+        String info = "";
+        info += "model:" + Build.MODEL + " \n";
+        info += "serial:" + Build.SERIAL + "\n";
+        info += "device:" + Build.DEVICE + "\n";
+        info += "HARDWARE:" + Build.HARDWARE + "\n";
+        info += "MANUFACTURER:" + Build.MANUFACTURER + "\n";
+        info += "FINGERPRINT:" + Build.FINGERPRINT + "\n";
+        info += "OS Version:" + System.getProperty("os.version") + "\n";
+        tv.setText(info);
     }
 
 

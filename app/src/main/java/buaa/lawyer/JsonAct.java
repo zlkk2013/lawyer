@@ -13,10 +13,14 @@ import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.apache.http.Header;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import buaa.lawyer.utility.HttpUtility;
 
 
 public class JsonAct extends Activity {
@@ -37,18 +41,14 @@ public class JsonAct extends Activity {
     }
 
     public void getData() {
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.get("http://api.dribbble.com/shots/everyone",null ,new AsyncHttpResponseHandler() {
+        AsyncHttpClient client = HttpUtility.createClient();
+        client.get("http://api.dribbble.com/shots/everyone",null ,new JsonHttpResponseHandler() {
             // When the response returned by REST has Http response code '200'
             @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+            public void onSuccess(int statusCode, Header[] headers, JSONObject obj) {
                 try {
-                    String str = new String(responseBody, "UTF-8");
-                    // JSON Object
-                    JSONObject obj = new JSONObject(str);
                     // When the JSON response has status boolean value assigned with true
                     Toast.makeText(getApplicationContext(), "You are successfully! data=" + obj.getInt("total"), Toast.LENGTH_LONG).show();
-
                 } catch (JSONException e) {
                     Toast.makeText(getApplicationContext(), "Error Occured [Server's JSON response might be invalid]!", Toast.LENGTH_LONG).show();
                     e.printStackTrace();
@@ -58,7 +58,7 @@ public class JsonAct extends Activity {
             }
 
             @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                 if(statusCode == 404){
                     Toast.makeText(getApplicationContext(), "Requested resource not found", Toast.LENGTH_LONG).show();
                 }
